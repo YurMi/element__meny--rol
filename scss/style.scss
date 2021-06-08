@@ -1,4 +1,5 @@
-                
+//=================================================================================================================================================================
+$color__light-blu: rgb(24, 111, 138);         
 //=================================================================================================================================================================
 *{
     box-sizing: border-box;
@@ -6,7 +7,11 @@
     margin: 0px 0px 0px 0px;
 }
 body{
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(24, 111, 138);
     ul,li{
         list-style: none;
     }
@@ -16,22 +21,77 @@ body{
 }
 //=================================================================================================================================================================
 .conteiner{
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    .navigation{
+        width: 53px;
+        overflow: hidden;
+        transition: .4s ease;
+        &.active{
+            width: 230px;
+        }
+    }
     ul{
         li{
             position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0px 0px 20px 30px;
+            height: 60px;
+            width: 100%;
+            transition: .4s ease;
+            padding: 10px 0px 0px 0px;
             svg{
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 10px;
+                left: 14px;
                 width: 24px;
                 height: 24px;
+                fill: $color__light-blu;
+                transition: .9s ease;
             }
-            span{
-                display: inline-block;
+            a{
+                display: block;
+                width: 100%;
+                padding: 0px 0px 20px 80px;
+                transition: .4s ease;
+                span{
+                    font-size: 24px;
+                    color: $color__light-blu;
+                    transition: .4s ease;
+                }
             }
+            &:hover{
+                background-color: rgba(24, 111, 138, 0.089);
+            }
+            &:hover a span,
+            &:hover a svg{
+                color: rgba(255, 0, 0, 0.692);
+                fill:rgba(255, 0, 0, 0.692);
+            }
+        }
+    }
+    .arr{
+        position: absolute;
+        bottom: 47.5%;
+        right: -15px;
+        width: 27px;
+        height: 27px;
+        background-color: #fff;
+        border: 2px solid $color__light-blu;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        cursor: pointer;
+        svg{
+            width: 14px;
+            height: 14px;
+            transform: rotate(90deg);
+            fill: $color__light-blu;
+            transition: .4s ease;
+        }
+        &.active svg{
+            transform: rotate(-90deg);
         }
     }
 }

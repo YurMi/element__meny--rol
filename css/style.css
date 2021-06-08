@@ -6,7 +6,17 @@
 }
 
 body {
-  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #186f8a;
 }
 
 body ul, body li {
@@ -17,25 +27,101 @@ body a {
   text-decoration: none;
 }
 
+.conteiner {
+  position: relative;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.conteiner .navigation {
+  width: 53px;
+  overflow: hidden;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.conteiner .navigation.active {
+  width: 230px;
+}
+
 .conteiner ul li {
   position: relative;
+  height: 60px;
+  width: 100%;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  padding: 10px 0px 0px 0px;
+}
+
+.conteiner ul li svg {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 24px;
+  height: 24px;
+  fill: #186f8a;
+  -webkit-transition: .9s ease;
+  transition: .9s ease;
+}
+
+.conteiner ul li a {
+  display: block;
+  width: 100%;
+  padding: 0px 0px 20px 80px;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.conteiner ul li a span {
+  font-size: 24px;
+  color: #186f8a;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.conteiner ul li:hover {
+  background-color: rgba(24, 111, 138, 0.089);
+}
+
+.conteiner ul li:hover a span,
+.conteiner ul li:hover a svg {
+  color: rgba(255, 0, 0, 0.692);
+  fill: rgba(255, 0, 0, 0.692);
+}
+
+.conteiner .arr {
+  position: absolute;
+  bottom: 47.5%;
+  right: -15px;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border: 2px solid #186f8a;
+  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 0px 20px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+  cursor: pointer;
 }
 
-.conteiner ul li svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
+.conteiner .arr svg {
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  fill: #186f8a;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
-.conteiner ul li span {
-  display: inline-block;
+.conteiner .arr.active svg {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
