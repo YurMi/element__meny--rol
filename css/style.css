@@ -1,0 +1,41 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+body {
+  background-color: #fff;
+}
+
+body ul, body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.conteiner ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px 20px 30px;
+}
+
+.conteiner ul li svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.conteiner ul li span {
+  display: inline-block;
+}
